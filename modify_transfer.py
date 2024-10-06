@@ -26,6 +26,7 @@ def __transfer(sfile, targetfile, pointer, increment, func=__modifier):
 	sfile.truncate(pointer+increment)
 	sfile.flush()
 	targetfile.flush()
+	print("sfile is now ",os.path.getsize(file_to_modify),"bytes\n", "tempfile is now ", os.path.getsize(tempfile), "bytes")
 
 def start(sfile, tempfile):
 	sfile = open(sfile, "br+")
