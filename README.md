@@ -11,9 +11,9 @@ b'a\nbb\nccc\ndddd\neeeee\n'
 
 it seeks the final lines from sfile, appends it to the empty 2nd file(tempfile), and truncates the line from itself(sfile)
 
-> sfile:  |  tempfile:
+> sfile:   |  tempfile:
 
->  b'a\n'		|  b'eeeee\n'
+>  b'a\n'  |   b'eeeee\n'
 
 >  b'bb\n' |   b'dddd\n'
 
