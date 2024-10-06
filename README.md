@@ -7,23 +7,17 @@ The algorithm works like this:
 
 the first file(sfile) may contain this:
 
->
-
->
-
->
-
 b'a\nbb\nccc\ndddd\neeeee\n'
 
 it seeks the final lines from sfile, appends it to the empty 2nd file(tempfile), and truncates the line from itself(sfile)
 '''
- sfile:   |  tempfile:
+ sfile:  |  tempfile:
 
-  b'a\n'  |   b'eeeee\n'
+  a      |   eeeee
 
-  b'bb\n' |   b'dddd\n'
+  bb     |   dddd
 
-          |   b'ccc\n'
+         |   ccc
 '''
 ->>>>
 
