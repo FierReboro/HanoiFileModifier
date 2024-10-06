@@ -11,13 +11,13 @@ b'a\nbb\nccc\ndddd\neeeee\n'
 
 it seeks the final lines from sfile, appends it to the empty 2nd file(tempfile), and truncates the line from itself(sfile)
 
-sfile:
+sfile:		| tempfile:
 
-b'a\nbb\n'
+b'a\n'		|	b'eeeee\n'
 
-tempfile:
+b'bb\n'	|	b'dddd\n'
 
-b'eeeee\ndddd\nccc\n'
+					|	b'ccc\n'
 
 ->>>>
 
