@@ -1,5 +1,6 @@
 # HanoiFileModifier
-Copy and truncates lines from a file to another and back again.
+
+This transfers each last line from a file to a temporary file like the moves from a Hanoi Tower.
 
 The purpose is to save disk space when modifying the lines from a large file which may take up too much space when making a new copy.
 
