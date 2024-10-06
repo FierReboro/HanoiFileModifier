@@ -10,7 +10,7 @@ the first file(sfile) may contain this:
 b'a\nbb\nccc\ndddd\neeeee\n'
 
 it seeks the final lines from sfile, appends it to the empty 2nd file(tempfile), and truncates the line from itself(sfile)
-'''
+```
  sfile:  |  tempfile:
 
   a      |   eeeee
@@ -18,7 +18,7 @@ it seeks the final lines from sfile, appends it to the empty 2nd file(tempfile),
   bb     |   dddd
 
          |   ccc
-'''
+```
 ->>>>
 
 sfile:
