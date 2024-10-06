@@ -34,7 +34,7 @@ sfile:   |  tempfile:
 ```
 
 
-then the same thing happens but in reverse. Tempfile truncate its final lines one by one as it copies the lines from itself to sfile.
+then the same thing happens but in reverse. Tempfile truncate its final lines one by one as it copies the last lines from itself to sfile.
 ```
 sfile:
  a
