@@ -2,7 +2,9 @@
 
 This transfers each last line from a file to a temporary file like the moves from a Hanoi Tower.
 
-The purpose is to save disk space when modifying the lines from a large file which may take up too much space when making a new copy.
+The purpose is to save disk space when modifying the lines from a large file which may take up too much space when making a new copy. 
+
+Since the truncate() function only removes the bytes from the farthest file pointer position(last byte of a file), if you do readline() from the beginning and copy it to a file, doing truncate() on the original file will remove the last bytes, causing the data to be destroyed.
 
 The algorithm works like this:
 
@@ -15,7 +17,7 @@ sfile:
  dddd
  eeeee
 ```
-it seeks the final lines from sfile, appends it to the empty 2nd file(tempfile), and truncates the line from itself(sfile)
+it seeks the final line from sfile, appends it to the empty 2nd file(tempfile), and truncates the line from itself(sfile)
 ```
  sfile:  |  tempfile:
 
@@ -32,7 +34,6 @@ sfile:   |  tempfile:
              bb
              a
 ```
-
 
 then the same thing happens but in reverse. Tempfile truncate its final lines one by one as it copies the last lines from itself to sfile.
 ```
