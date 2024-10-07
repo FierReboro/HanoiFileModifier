@@ -12,7 +12,7 @@ def __seek_read(file_, pointer):
 def __modifier(c):
 	if len(c) == 0:
 		return b''
-	c = c.rstrip()
+	c = c[:-1]
 	print(77777, c)
 	return c + b'\n'
 
