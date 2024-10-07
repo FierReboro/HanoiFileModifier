@@ -1,6 +1,7 @@
 import os
 
 if __name__ == "__main__":
+	#change the file_to_modify to the name of your file
 	file_to_modify = "f1.txt"
 	tempfile = "f2.txt"
 
