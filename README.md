@@ -28,21 +28,23 @@ it seeks the final line from sfile, appends it to the empty 2nd file(tempfile), 
 the lines can be modified before the transfer happens
 ```
 sfile:   |  tempfile:
-             eeeee
-             dddd
-             ccc
-             bb
-             a
+
+         |   eeeee
+         |   dddd
+         |   ccc
+         |   bb
+         |   a
 ```
 
 then the same thing happens but in reverse. Tempfile truncate its final lines one by one as it copies the last lines from itself to sfile.
 ```
-sfile:
- a
- bb
- ccc
- dddd
- eeeee
+sfile:   |  tempfile:
+
+ a       |
+ bb      |
+ ccc     |
+ dddd    |
+ eeeee   |
 ```
 Make sure to make copy of your file before testing this. This was done on android phone, it might be os-specific
 
